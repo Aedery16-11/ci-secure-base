@@ -3,4 +3,3 @@
 
 #VERSION ERREUR
 Flask==1.0
-
