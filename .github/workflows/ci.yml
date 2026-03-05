@@ -17,17 +17,15 @@ jobs:
         with:
           scan-type: "fs"
           scan-ref: "."
-          format: "table"
+          format: "tem"
           exit-code: "1"
           severity: "CRITICAL,HIGH"
       - name: Generate HTML Reports
         uses: aquasecurity/trivy-action@master
         with:
-          scan-type: "fs"
-          scan-ref: .
           format: 'template'
-          template: "@.github/workflows/report.tpl"
-
+          template: "@report.tpl"
+          output: 'trivy-report.html'
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
