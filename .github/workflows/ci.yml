@@ -20,11 +20,9 @@ jobs:
           format: "template"
           exit-code: "1"
           severity: "CRITICAL,HIGH"
-          template: "@report.tpl"
-          output: 'trivy-report.html'
+          template: "@html.tpl"
 
-      - name: Generate HTML Reports
-        uses: aquasecurity/trivy-action@master
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
