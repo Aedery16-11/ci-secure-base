@@ -20,6 +20,7 @@ jobs:
           format: "template"
           exit-code: "1"
           severity: "CRITICAL,HIGH"
+          output: "trivy-report.html"
           template: "@html.tpl"
 
 
